@@ -5,11 +5,7 @@ export default function Terms(){
     <>
       <Header />
       <main className="section">
-        <div className="container card" style={{maxWidth:"900px"}}>
-          <h1>Terms & Conditions</h1>
-          <p className="small">This website provides educational information. Nothing here is legal, tax, or financial advice.</p>
-          <p className="small">By contacting us at <a href="mailto:hello@barokgroup.org">hello@barokgroup.org</a> or <a href="tel:+15712753720">(571) 275-3720</a>, you consent to be contacted about your inquiry.</p>
-        </div>
+        <div className="container card"><h1>Terms & Conditions</h1><p className="small">Sample terms.</p></div>
       </main>
       <Footer />
     </>

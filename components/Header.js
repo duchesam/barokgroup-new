@@ -1,12 +1,12 @@
 import Link from "next/link";
 export default function Header(){
   return (
-    <header className="header">
-      <div className="logo"><Link href="/">Barok Group</Link></div>
-      <nav className="nav">
+    <header className="nav">
+      <nav className="container">
+        <Link href="/">Barok Group</Link>
+        <div className="spacer"/>
         <Link href="/services">Services</Link>
         <Link href="/options">Options</Link>
-        <Link href="/terms">Terms</Link>
         <Link href="/contact">Contact</Link>
       </nav>
     </header>
