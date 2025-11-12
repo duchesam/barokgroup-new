@@ -1,18 +1,5 @@
-# Barok Group (Next 13)
+# Barok Group (Next.js static)
 
-Emails are set to **hello@barokgroup.org**.
-
-## Dev
-npm install
-npm run dev
-
-## Build & Export
-npm run build
-npm start
-
-## Deploy
-git init && git add -A && git commit -m "init"
-git branch -M main
-git remote add origin https://github.com/<your-username>/barokgroup-new.git
-git push -u origin main
-Then import in Vercel.
+- Mobile-first, responsive.
+- Static export for fast Vercel deploys.
+- Contact: hello@barokgroup.org
