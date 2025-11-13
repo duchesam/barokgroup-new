@@ -1,48 +1,55 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Head from "next/head";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Link from "next/link";
 
 export default function Home(){
   return (
     <>
+      <Head>
+        <title>Barok Group — Nationwide Foreclosure Help</title>
+        <meta name="description" content="Real options to stop auctions, avoid foreclosure, and move forward with clarity." />
+      </Head>
       <Header />
-      <main className="section">
-        <div className="container hero">
-          <h1>Nationwide Foreclosure Help</h1>
-          <p>
-            Real options when you need them most. We help homeowners across the U.S.
-            avoid foreclosure, stop auctions, and move forward — clearly and quickly.
-          </p>
-          <div style={{display:"flex",gap:12,flexWrap:"wrap",marginTop:14}}>
-            <Link className="btn" href="/get-offer">Get a Cash Offer</Link>
-            <Link className="btn secondary" href="/options">Explore Options</Link>
-          </div>
 
-          <div className="badges" style={{marginTop:18}}>
-            <div className="badge">Fast decisions</div>
-            <div className="badge">No commissions</div>
-            <div className="badge">Nationwide network</div>
-            <div className="badge">Transparent process</div>
+      {/* HERO with background image */}
+      <section className="hero">
+        <div className="hero__overlay" />
+        <div className="container hero__content">
+          <h1>Nationwide Foreclosure Help</h1>
+          <p>Real options when you need them most. We help homeowners across the U.S. avoid foreclosure, stop auctions, and move forward.</p>
+          <div className="actions">
+            <a className="btn" href="/get-offer">Get a Cash Offer</a>
+            <Link className="btn btn--ghost" href="/options">Explore Options</Link>
+          </div>
+          <div className="pills">
+            <span className="pill">Fast decisions</span>
+            <span className="pill">No commissions</span>
+            <span className="pill">Nationwide network</span>
+            <span className="pill">Transparent process</span>
           </div>
         </div>
+      </section>
 
-        <div className="container" style={{marginTop:28}}>
-          <div className="grid grid-3">
+      <main className="section">
+        <div className="container">
+          <div className="grid grid-3" style={{gap:18}}>
             <div className="card">
-              <h3>Stop an Auction</h3>
-              <p className="small">Coordinate reinstatement, postponement, or sale before the auction date.</p>
+              <h3>Stop the Clock</h3>
+              <p className="small">We coordinate payoff, reinstatement, postponements, and buyer docs—protecting your timeline.</p>
             </div>
             <div className="card">
-              <h3>Sell for Cash (7–14 days)</h3>
-              <p className="small">We can acquire quickly, or bring our network to get you stronger pricing.</p>
+              <h3>Real Choices</h3>
+              <p className="small">Reinstate, modify, sell (cash or concierge), or creative options like subject-to—whichever fits best.</p>
             </div>
             <div className="card">
-              <h3>Creative Solutions</h3>
-              <p className="small">“Subject-to” / buyback paths when keeping the existing rate makes sense.</p>
+              <h3>Clear Communication</h3>
+              <p className="small">Direct answers, no pressure, and updates you can trust.</p>
             </div>
           </div>
         </div>
       </main>
+
       <Footer />
     </>
   );

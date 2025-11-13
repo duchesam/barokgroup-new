@@ -43,3 +43,44 @@ a:hover{text-decoration:underline}
   .grid-2{grid-template-columns:1fr}
   .nav .links{gap:14px}
 }
+
+/* ===== Hero (background image) ===== */
+.hero{
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1600&auto=format&fit=crop"); /* modern home exterior */
+  background-size: cover;
+  background-position: center;
+}
+.hero__overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(3,10,20,.65) 0%, rgba(3,10,20,.65) 100%);
+}
+.hero__content{
+  position: relative;
+  z-index: 1;
+  color: #eef3ff;
+  padding-top: 32px; padding-bottom: 32px;
+}
+.hero h1{
+  margin: 0 0 10px 0;
+  font-size: clamp(28px, 6vw, 54px);
+  line-height: 1.05;
+}
+.hero p{
+  max-width: 820px;
+  font-size: clamp(16px, 2.2vw, 20px);
+  opacity: .95;
+}
+.hero .actions{ display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; }
+.btn{
+  background:#3b82f6; color:#fff; padding:12px 18px; border-radius:10px; font-weight:600; display:inline-block;
+}
+.btn--ghost{ background:transparent; border:1px solid rgba(255,255,255,.35); color:#fff; }
+.pills{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+.pill{ background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.15); color:#fff; padding:8px 12px; border-radius:999px; font-size:14px; }
+@media (max-width:768px){
+  .hero{ min-height: 64vh; }
+}
